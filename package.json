@@ -1,0 +1,17 @@
+{
+  "name": "lite_db_connector_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "type": "module",
+  "scripts": {
+    "all-tests": "node --test",
+    "read-test": "node --test ./src/test/read.test.js",
+    "write-string-test": "node --test ./src/test/write_string.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.2.4"
+  }
+}

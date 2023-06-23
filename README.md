@@ -1,0 +1,1 @@
+LiteDB connector for NodeJS

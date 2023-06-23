@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+      "module": "ESNext",
+      "target": "ES2022",
+
+      "rootDir": "src",
+  
+      "declaration": false,
+      "declarationMap": false,
+  
+      "sourceMap": true,
+      "inlineSourceMap": false,
+  
+      "moduleResolution": "Node",
+      "allowSyntheticDefaultImports": false,
+  
+      "strict": true,
+      "alwaysStrict": true,
+  
+      "noUnusedLocals": false,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+  
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": [
+      "src"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
