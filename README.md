@@ -60,7 +60,6 @@ const listener = async () => {
     if (getBaseInst.name !== baseInst.name) {
         throw new Error("names not equal");
     }
-    done();
 };
 socket.connect(options, listener);
 ```
@@ -219,7 +218,6 @@ const listener = async () => {
 socket.on("error", console.log);
 socket.connect(options, () => {
     listener()
-        .catch(console.log)
-        .then(done);
+        .catch(console.log);
 });
 ```
