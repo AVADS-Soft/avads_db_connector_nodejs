@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "all-tests": "node --test",
+    "base-test": "node --test ./src/test/base.test.js",
     "read-test": "node --test ./src/test/read.test.js",
     "write-string-test": "node --test ./src/test/write_string.test.js"
   },

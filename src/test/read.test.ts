@@ -50,9 +50,11 @@ test("read test", (_, done) => {
         await socket.handshake();
         console.log("protocol version:", socket.protocolVersion);
         console.log("session key:", socket.sessionKey);
-        const baseInfo = await baseGetInfo(socket, baseName);
-        console.log(baseInfo);
-        await baseRemove(socket, baseName);
+        const baseInfo = await baseGetInfo(socket, baseName)
+            .then(console.log)
+            .then(() => baseRemove(socket, baseName))
+            .then(() => console.log("remove"))
+            .catch(console.log);
         const base = new Base({
             name: baseName,
             comment: baseName,
@@ -62,6 +64,7 @@ test("read test", (_, done) => {
             autoAddSeries: true,
         });
         await baseCreate(socket, base);
+        console.log("create");
 
         let series = new Series({
             name: "LINT_single",
